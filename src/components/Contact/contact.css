@@ -54,15 +54,18 @@
     max-width: 60rem;
 }
 
-.name, .email, .msg {
+.name,
+.email,
+.msg {
     font-size: medium;
     width: 100%;
     max-width: 40rem;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
     color: white;
+    background-color: rgb(40, 40, 40); 
     border: none;
-    border-radius: rgb(40, 40, 40);
+    border-radius: 5px; 
 }
 
 .submitBtn {
@@ -71,6 +74,7 @@
     border-radius: 0.5rem;
     margin: 2rem;
     padding: 0.75rem 3.5rem;
+    cursor: pointer; 
 }
 
 .links {
@@ -84,3 +88,4 @@
     width: 3rem;
     margin: 0 0.75rem;
 }
+

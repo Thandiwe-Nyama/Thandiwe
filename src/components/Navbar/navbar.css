@@ -41,10 +41,14 @@
     border-radius: 2rem;
 }
 
-
 .desktopMemuImg {
     object-fit: cover;
     height: 16rem;
     width: 16rem;
     margin: 1rem;
+}
+
+.active {
+    color: yellow;
+    
 }
