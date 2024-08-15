@@ -15,7 +15,7 @@ const Navbar = () => {
             <Link activeclass='active' to='works' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenuListItem">Portfolio</Link>
             <Link activeclass='active' to='clients' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenuListItem">Clients</Link>
         </div>
-        <button className="desktopMenuBtn" onClick={() => {
+        <button className="desktopMenuBtn" onClick={ () => {
           document.getElementsById('contact').scrollIntroView({behavior: 'smooth'});
         }}>
             <img src={contactImg} alt="" className="desktopMenuImg" />Contact Me</button>
