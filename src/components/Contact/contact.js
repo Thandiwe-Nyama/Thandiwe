@@ -5,9 +5,11 @@ import Phathek from '../../assets/Phathek.png';
 import facebook from '../../assets/facebook.png';
 import git from '../../assets/git.png';
 import linkedin from '../../assets/linkedin.png';
+import emailjs from '@emailjs/browser';
 
 
 const Contact = () => {
+    const form = useRef();
     return (
         <section id="contactPage">
             <div id="clients">
