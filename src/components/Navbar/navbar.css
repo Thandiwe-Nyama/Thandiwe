@@ -53,3 +53,10 @@
     padding-bottom: 0.5rem;
     border-bottom: 3px solid yellow; 
 }
+
+.navMenu {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    z-index: 2;
+}
