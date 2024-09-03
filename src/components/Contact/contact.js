@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './contact.css';
 import Chuma from '../../assets/Chuma.jpg';
 import Phathek from '../../assets/Phathek.png';
@@ -10,6 +10,19 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const form = useRef();
+     const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_9ihmjwh', 'template_sqgom0a', form.current, 'N0yZWkeORfX8E9lGM5gR_')
+        .then((result) => {
+            console.log(result.text);
+            e.target.reset();
+            alert('Email Sent !');
+        }, (_error) => {
+           console.log('error.text');
+         });
+    };
     return (
         <section id="contactPage">
             <div id="clients">
@@ -26,16 +39,15 @@ const Contact = () => {
             <div id="contactPage">
                 <h1 className="contactPageTitle">Contact Me</h1>
                 <span className="contactDesc">Please fill out the form below to discuss any work opportunities.</span>
-                <form className="contactForm" >
-                    <input type="text" className="name" placeholder="Your Name" />
-                    <input type="email" className="email" placeholder="Your Email" />
+                <form className="contactForm" onSubmit={sendEmail} >
+                    <input type="text" className="name" placeholder="Your Name" name='your_name'/>
+                    <input type="email" className="email" placeholder="Your Email" name='your_email'/>
                     <textarea className="msg" name="message" rows="5" placeholder="Your Message"></textarea>
                     <button type='submit' value="send" className="submitBtn">Submit</button>
                     <div className="links">
                         <img src={facebook} alt="" classname="link" />
-                        <img src={git} alt="" classname="link" />
-                        <img src={linkedin} alt="" classname="link" />
-                        <img src="" alt="" classname="link" />
+                        <img src={git} alt="https://github.com/Thandiwe-Nyama" classname="link" />
+                        <img src={linkedin} alt="www.linkedin.com/in/nyama-thandiwe-a24168255/" classname="link" />
                     </div>
                 </form>
             </div>
